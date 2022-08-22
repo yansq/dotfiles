@@ -1,0 +1,82 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+
+set incsearch
+set relativenumber
+set nu
+set NERDTree
+" use system clipboard
+set clipboard=unnamed
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" split windows in horizon and vertical
+map ss <C-w>s
+map sv <C-w>v
+
+" navigate between windows and tabs
+map sh <C-w>h
+map sk <C-w>k
+map sj <C-w>j
+map sl <C-w>l
+map <Space> <C-w>w
+map <Tab> gt
+map <leader><Tab> gT
+
+" use vim navigate documents tree on the left side
+nmap sf :NERDTree<CR>
+
+" run project
+nmap zr <Action>(Run)
+" debug project
+nmap zd <Action>(Debug)
+" stop project
+nmap zc <Action>(Stop)
+
+" format code
+nmap <leader>f <Action>(ReformatCode)
+
+nmap <leader>e <Action>(ShowErrorDescription)
+
+nmap <leader>g <Action>(GotoDeclaration)
+
+nmap <leader>i <Action>(GotoImplementation)
+
+nmap <leader>n <Action>(NewFile)
+
+nmap <leader>b <Action>(ToggleLineBreakpoint)
+
+nmap <leader>w <Action>(JumpToLastWindow)
+nmap <leader>x <Action>(HideAllWindows)
+
+nmap zen <Action>(ToggleDistractionFreeMode)
+
+nmap ;f <Action>(RecentFiles)
+
+nmap <C-j> <Action>(GotoNextError)
+nmap <C-k> <Action>(GotoPreviousError)
+nmap <C-/> <Action>(FindInPath)
+
+nmap ff <Action>(GotoFile)
+nmap gb <Action>(Annotate)
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
